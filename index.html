@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>auth</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <h1>AdoConcept Wi-Fi Zone</h1>
-    <p>Ku shigar da lambobin <b>katin ku</b> domin samun yanar gizo.</p>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ado Wi-Fi Zone</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ado Wi-Fi Zone</h1>
+      <p>Veuillez entrer le <b>code</b> pour accéder à Internet.</p>
 
-    <form id="voucher-form" method="post" action="http://example.com/login">
-      <!-- Remplace action par l’URL d’authentification GDMS / Radius -->
-      <input type="text" id="voucher" name="voucher" placeholder="ku shigar da katin ku" required>
-      <br><br>
-      <button type="submit">Shiga</button>
-    </form>
+      <form id="voucher-form" method="post" action="$(link-login-only)">
+        <!-- Champ Voucher -->
+        <input type="text" id="voucher" name="voucher" placeholder="Entrez votre code" required>
 
-    <p id="error-message" class="hidden">❌ Katin ku ba daidai bane ko ya kare. Ku sake gwadawa.</p>
-  </div>
+        <!-- Champs cachés -->
+        <input type="hidden" name="dst" value="$(link-orig)" />
+        <input type="hidden" name="popup" value="true" />
 
-  <script src="script.js"></script>
-</body>
+        <br><br>
+        <button type="submit">Se connecter</button>
+      </form>
+
+      <!-- Message d'erreur injecté par GDMS -->
+      <p id="error-message" class="error">$(error)</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
+
+<!--mon tocken : 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-->
