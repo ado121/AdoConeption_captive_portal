@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ado Wi-Fi Zone</title>
+    <title>Auth</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="container">
-      <h1>Ado Wi-Fi Zone</h1>
+
+      <!-- Logo à la place du titre -->
+      <img src="logo.png" alt="Ado Logo" class="logo">
+      
+      <h1>Wi-Fi Zone</h1>
       <p>Veuillez entrer le <b>code</b> pour accéder à Internet.</p>
 
       <form id="voucher-form" method="post" action="$(link-login-only)">
@@ -25,6 +29,50 @@
 
       <!-- Message d'erreur injecté par GDMS -->
       <p id="error-message" class="error">$(error)</p>
+
+        <!-- Tableau des tarifs -->
+        <h2>Nos Tarifs</h2>
+        <table class="tarifs">
+          <tr>
+            <th>Forfait</th>
+            <th>Durée</th>
+            <th>Données</th>
+            <th>Prix</th>
+          </tr>
+          <tr>
+            <td>Basique</td>
+            <td>2h</td>
+            <td>1,5 Go</td>
+            <td>100 FCFA</td>
+          </tr>
+          <tr>
+            <td>Standard</td>
+            <td>24h</td>
+            <td>Illmité</td>
+            <td>200 FCFA</td>
+          </tr>
+          <tr>
+            <td>Premium</td>
+            <td>7 jours</td>
+            <td>10 Go</td>
+            <td>500 FCFA</td>
+          </tr>
+          <tr>
+            <td>Premium</td>
+            <td>30 jours</td>
+            <td>20 Go</td>
+            <td>1000 FCFA</td>
+          </tr>
+        </table>
+        <!-- Footer -->
+        <footer>
+          <p>
+            <span class="icon">📞</span> 
+            <a href="tel:+22798858729">Appelez-nous</a> |
+            <img src="WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
+            <a href="https://wa.me/22798858729" target="_blank">WhatsApp</a>
+          </p>
+        </footer>
     </div>
 
     <script src="script.js"></script>
