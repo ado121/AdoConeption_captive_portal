@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>auth</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>AdoConcept Wi-Fi Zone</h1>
+    <p>Ku shigar da lambobin <b>katin ku</b> domin samun yanar gizo.</p>
+
+    <form id="voucher-form" method="post" action="http://example.com/login">
+      <!-- Remplace action par l’URL d’authentification GDMS / Radius -->
+      <input type="text" id="voucher" name="voucher" placeholder="ku shigar da katin ku" required>
+      <br><br>
+      <button type="submit">Shiga</button>
+    </form>
+
+    <p id="error-message" class="hidden">❌ Katin ku ba daidai bane ko ya kare. Ku sake gwadawa.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
